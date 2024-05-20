@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AlumnoMain">
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menú"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:id="@+id/btnCuestionario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMenu"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginEnd="28dp"
+        android:text="Cuestionario" />
+
+    <Button
+        android:id="@+id/btnCitaPsicologo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCuestionario"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="29dp"
+        android:text="Cita Psicólogo" />
+
+    <EditText
+        android:id="@+id/txtMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCitaPsicologo"
+        android:layout_marginTop="43dp"
+        android:hint="Escribe tu mensaje aquí"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:minLines="3" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtMensaje"
+        android:layout_marginTop="36dp"
+        android:text="Enviar" />
+
+</RelativeLayout>
