@@ -1,20 +1,22 @@
 package com.example.apppsico;
-
+import com.example.apppsico.R;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.PopupMenu;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class AlumnoMain extends AppCompatActivity {
+    private static final int MENU_PERFIL = R.id.menuperfil;
+    private static final int CAMBIAR_CONTRASENIA = R.id.cambiarcontrasenia;
+    private static final int CERRAR_SESION = R.id.cerrarsesion;
 
     private Button btnMenu;
     private Button btnCuestionario;
@@ -37,14 +39,6 @@ public class AlumnoMain extends AppCompatActivity {
         btnCitaPsicologo = findViewById(R.id.btnCitaPsicologo);
         txtMensaje = findViewById(R.id.txtMensaje);
         btnEnviar = findViewById(R.id.btnEnviar);
-
-        // Configurar OnClickListener para el botón de Menú
-        btnMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPopupMenu();
-            }
-        });
 
         // Configurar OnClickListener para el botón de Cuestionario
         btnCuestionario.setOnClickListener(new View.OnClickListener() {
@@ -87,33 +81,27 @@ public class AlumnoMain extends AppCompatActivity {
         });
     }
 
-    // Método para mostrar el menú desplegable
-    private void showPopupMenu() {
-        PopupMenu popupMenu = new PopupMenu(this, btnMenu);
-        popupMenu.getMenuInflater().inflate(R.menu.menu_alumno_main, popupMenu.getMenu());
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menualumno, menu);
+        return true;
+    }
 
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.menu_perfil:
-                        // Acción para la opción "Perfil"
-                        startActivity(new Intent(AlumnoMain.this, PerfilActivity.class));
-                        return true;
-                    case R.id.menu_cambiar_contrasenia:
-                        // Acción para la opción "Cambiar Contraseña"
-                        startActivity(new Intent(AlumnoMain.this, CambiarContraseniaActivity.class));
-                        return true;
-                    case R.id.menu_cerrar_sesion:
-                        // Acción para la opción "Cerrar Sesión"
-                        cerrarSesion();
-                        return true;
-                    default:
-                        return false;
-                }
-            }
-        });
-        popupMenu.show();
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_PERFIL:
+                abrirPerfil();
+                return true;
+            case CAMBIAR_CONTRASENIA:
+                abrirCambiarContrasenia();
+                return true;
+            case CERRAR_SESION:
+                cerrarSesion();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     // Método para verificar si el mensaje contiene palabras relacionadas con suicidio
@@ -125,6 +113,18 @@ public class AlumnoMain extends AppCompatActivity {
     // Método para enviar mensaje al psicólogo
     private void enviarMensaje(String mensaje) {
         // Aquí implementa tu lógica para enviar el mensaje al psicólogo
+    }
+
+    private void abrirPerfil() {
+        // Lógica para abrir la actividad de perfil
+        Intent intent = new Intent(this, PerfilActivity.class);
+        startActivity(intent);
+    }
+
+    private void abrirCambiarContrasenia() {
+        // Lógica para abrir la actividad de cambiar contraseña
+        Intent intent = new Intent(this, CambiarContraseniaActivity.class);
+        startActivity(intent);
     }
 
     // Método para cerrar sesión
