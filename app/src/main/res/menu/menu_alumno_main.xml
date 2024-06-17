@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Cerrar Sesión" />
+    <item
+        android:id="@+id/menu_profile"
+        android:title="Perfil" />
+    <item
+        android:id="@+id/menu_change_password"
+        android:title="Cambiar Contraseña" />
+</menu>

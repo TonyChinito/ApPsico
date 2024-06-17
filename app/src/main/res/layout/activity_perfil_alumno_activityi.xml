@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilActivity">
+
+    <!-- ImageButton para cerrar la actividad -->
+    <ImageButton
+        android:id="@+id/btnCerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Cerrar actividad"
+        android:src="@drawable/ic_close" />
+
+    <!-- TextView para Nombre Completo -->
+    <TextView
+        android:id="@+id/textViewNombreCompleto"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/btnCerrar"
+        android:text="Nombre Completo:"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <!-- TextView para el valor de Nombre Completo -->
+
+    <!-- TextView para Nivel Cursado -->
+
+    <TextView
+        android:id="@+id/textViewNombreCompletoValor"
+        android:layout_width="189dp"
+        android:layout_height="22dp"
+        android:layout_alignBaseline="@id/textViewNombreCompleto"
+        android:layout_marginStart="9dp"
+        android:layout_toEndOf="@id/textViewNombreCompleto"
+        android:background="@drawable/border_black"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/textViewNivelCursado"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewNombreCompleto"
+        android:text="Nivel Cursado:"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <!-- TextView para el valor de Nivel Cursado -->
+    <TextView
+        android:id="@+id/textViewNivelCursadoValor"
+        android:layout_width="192dp"
+        android:layout_height="19dp"
+        android:layout_alignBaseline="@id/textViewNivelCursado"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/textViewNivelCursado"
+        android:background="@drawable/border_black"
+        android:padding="8dp" />
+
+    <!-- TextView para Año -->
+    <TextView
+        android:id="@+id/textViewAnio"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewNivelCursado"
+        android:text="Año:"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <!-- TextView para el valor de Año -->
+    <TextView
+        android:id="@+id/textViewAnioValor"
+        android:layout_width="179dp"
+        android:layout_height="19dp"
+        android:layout_alignBaseline="@id/textViewAnio"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/textViewAnio"
+        android:background="@drawable/border_black"
+        android:padding="8dp" />
+
+    <!-- TextView para Sección -->
+    <TextView
+        android:id="@+id/textViewSeccion"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewAnio"
+        android:text="Sección:"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <!-- TextView para el valor de Sección -->
+    <TextView
+        android:id="@+id/textViewSeccionValor"
+        android:layout_width="177dp"
+        android:layout_height="24dp"
+        android:layout_alignBaseline="@id/textViewSeccion"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/textViewSeccion"
+        android:background="@drawable/border_black"
+        android:padding="8dp" />
+
+</RelativeLayout>

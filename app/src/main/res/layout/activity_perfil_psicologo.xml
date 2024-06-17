@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilPsicologoActivity">
+
+    <!-- ImageButton para cerrar la actividad -->
+    <ImageButton
+        android:id="@+id/btnCerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Cerrar actividad"
+        android:src="@drawable/ic_close" />
+
+    <!-- TextView para Nombre Completo -->
+    <TextView
+        android:id="@+id/textViewNombreCompleto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCerrar"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:text="Nombre Completo:"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <!-- TextView para el valor de Nombre Completo -->
+
+    <!-- TextView para Nivel Encargado -->
+    <TextView
+        android:id="@+id/textViewNombreCompletoValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNombreCompleto"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="-29dp"
+        android:layout_toEndOf="@id/textViewNombreCompleto"
+        android:background="@drawable/border_black"
+        android:padding="8dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textViewNivelEncargado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNombreCompletoValor"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:text=""
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <!-- TextView para el valor de Nivel Encargado -->
+    <TextView
+        android:id="@+id/textViewNivelEncargadoValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNivelEncargado"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="-27dp"
+        android:layout_toEndOf="@id/textViewNivelEncargado"
+        android:background="@drawable/border_black"
+        android:padding="8dp"
+        android:text="Primaria" />
+
+</RelativeLayout>
